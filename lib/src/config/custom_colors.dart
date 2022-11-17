@@ -14,8 +14,8 @@ Map<int, Color> _swatchOpaticy = {
 };
 
 abstract class CustomColors {
-  static Color customContrastColor = Colors.red.shade700;
+  static Color customContrastColor = Colors.indigo.shade700;
 
   static MaterialColor customSwatchColor =
-      MaterialColor(0xFF8BC34A, _swatchOpaticy);
+      MaterialColor(0xFF212121, _swatchOpaticy);
 }

@@ -1,6 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:greengrocer/src/auth/coponents/custom_text_field.dart';
+import 'package:greengrocer/src/pages/auth/coponents/custom_text_field.dart';
+import 'package:greengrocer/src/pages/auth/sign_up_screen.dart';
+import 'package:greengrocer/src/pages/base/base_screen.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -106,7 +108,12 @@ class SignInScreen extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18))),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushReplacement(MaterialPageRoute(builder: (c) {
+                            return const BaseScreen();
+                          }));
+                        },
                         child: const Text(
                           'Entrar',
                           style: TextStyle(fontSize: 18),
@@ -163,10 +170,16 @@ class SignInScreen extends StatelessWidget {
                           ),
                           side: const BorderSide(
                             width: 2,
-                            color: Colors.green,
+                            color: Colors.black,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (c) {
+                              return SignUpScreen();
+                            }),
+                          );
+                        },
                         child: const Text(
                           'Criar conta',
                           style: TextStyle(
